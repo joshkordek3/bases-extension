@@ -1,4 +1,4 @@
-//% color=#800080 weight=100 icon="\uf1ec" block="Advanced Numbers"
+//% color=#800080 weight=101 icon="\uf1ec" block="Advanced Numbers"
 namespace hello {
 //%block
 //% group="Converting Bases"
