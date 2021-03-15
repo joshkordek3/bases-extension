@@ -1,4 +1,4 @@
-//% color=#A442DC weight=0 icon="\uf1ec" block="Advanced Numbers"
+//% color=#9600CD weight=0 icon="\uf1ec" block="Advanced Numbers"
 namespace testy_test {
 //%block
 //% group="Converting Bases"
