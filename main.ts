@@ -1,5 +1,5 @@
 //% color=#4B0082 weight=0 icon="\uf1ec" block="Advanced Numbers"
-namespace hello {
+namespace testy_test {
 //%block
 //% group="Converting Bases"
 export function convert_from_base_to_base_10 (base: number, num: number) {
