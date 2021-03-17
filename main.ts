@@ -13,10 +13,10 @@ export function convert_from_base_to_base_10 (base: number, num: number) {
 }
 //% block="Convert $num from hexadecimal to base 10"
 //% group="Converting Bases"
-export function convert__from_base_to_base_10 (num: number) {
+export function convert__from_base_to_base_10 (num: string) {
     temp_txt = ""
-    for (let index = 0; index <= convertToText(num).length - 1; index++) {
-        temp_txt = "" + (convertToText(num).charAt(index).indexOf(a_n()))
+    for (let index = 0; index <= num.length - 1; index++) {
+        temp_txt = "" + (num.charAt(index).indexOf(a_n()))
     }
     return parseFloat(temp_txt)
 }
