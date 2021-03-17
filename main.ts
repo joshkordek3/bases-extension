@@ -37,7 +37,7 @@ export function to_base (num: number, new_base: number) {
     temp_num2 = 0
     while (temp_num--) {
         temp_num3 = Math.idiv(num, (new_base ** temp_num))
-        num = num / new_base
+        num = num % new_base
         temp_num2 = temp_num2*10 + temp_num3;
     }
     return temp_num2
