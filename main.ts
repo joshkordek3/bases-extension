@@ -16,7 +16,7 @@ export function convert_from_base_to_base_10 (base: number, num: number) {
 export function convert_from_hex_base_10 (base: number, num: string) {
     temp_num = 0
     for (let index = 0; index <= num.length - 1; index++) {
-        temp_num += ((a_n().indexOf(num.charAt(index))) * base ** (num.length - index))
+        temp_num += ((a_n().indexOf(num.charAt(index))) * base ** (num.length - (index + 1)))
     }
     return temp_num
 }
