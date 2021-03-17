@@ -11,19 +11,21 @@ export function convert_from_base_to_base_10 (base: number, num: number) {
     }
     return temp_val
 }
-//% block="Convert $num from $base (11-16) base to base 10"
+//% block="Convert $num from $base (11-36) base to base 10"
 //% group="Converting Bases"
 export function convert_from_hex_base_10 (base: number, num: string) {
-    temp_num = 0
-    for (let index = 0; index <= num.length - 1; index++) {
-        temp_num += ((a_n().indexOf(num.charAt(index))) * base ** (num.length - (index + 1)))
+    temp_val = 0
+    if (is_between(base, 11, 36)) {
+       for (let index = 0; index <= num.length - 1; index++) {
+            temp_val += ((a_n().indexOf(num.charAt(index))) * base ** (num.length - (index + 1)))
+        } 
     }
-    return temp_num
+    return temp_val
 }
-//% block="Numbers in hexdecimal"
+//% block="Numbers in base 36"
 //% group="Values"
 export function a_n() {
-    return "0123456789ABCDEF"
+    return "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 }
 export function convert_from_base_10_to_base (num: number, base: number) {
     temp_val2 = num
