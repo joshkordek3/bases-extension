@@ -27,10 +27,11 @@ export function convert_from_hex_base_10 (base: number, num: string) {
 export function a_n() {
     return "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 }
-//%block
+//% block="Convert $num from base 10 to base $new_base (2-10)"
 //% group="Converting Bases"
 export function to_base (num: number, new_base: number) {
     temp_num = 0
+    if (is_between (new_base, 2, 10)) {
     while ((new_base ** temp_num) <= num) {
         temp_num++;
     }
@@ -39,6 +40,7 @@ export function to_base (num: number, new_base: number) {
         temp_num3 = Math.idiv(num, (new_base ** temp_num))
         num = num % new_base
         temp_num2 = temp_num2*10 + temp_num3;
+    }
     }
     return temp_num2
 }
