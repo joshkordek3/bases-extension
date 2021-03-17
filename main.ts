@@ -31,11 +31,11 @@ export function a_n() {
 //% group="Converting Bases"
 export function to_base (num: number, new_base: number) {
     temp_num = 0
+    temp_num2 = 0
     if (is_between (new_base, 2, 10)) {
     while ((new_base ** temp_num) <= num) {
         temp_num++;
     }
-    temp_num2 = 0
     while (temp_num--) {
         temp_num3 = Math.idiv(num, (new_base ** temp_num))
         num = num % new_base
@@ -43,6 +43,23 @@ export function to_base (num: number, new_base: number) {
     }
     }
     return temp_num2
+}
+//% block="Convert $num from base 10 to base $new_base (11-36)"
+//% group="Converting Bases"
+export function to__base (num: number, new_base: number) {
+    temp_num = 0
+    temp_num4 = ""
+    if (is_between (new_base, 2, 10)) {
+    while ((new_base ** temp_num) <= num) {
+        temp_num++;
+    }
+    while (temp_num--) {
+        temp_num5 = a_n().charAt((Math.idiv(num, (new_base ** temp_num))) + 1)
+        num = num % new_base
+        temp_num4 = "" + temp_num4 + temp_num5;
+    }
+    }
+    return temp_num4
 }
 export function convert_from_base_10_to_base (num: number, base: number) {
     temp_val2 = num
@@ -77,6 +94,8 @@ let temp_val = 0
 let temp_num = 0
 let temp_num2 = 0
 let temp_num3 = 0
+let temp_num4 = ""
+let temp_num5 = ""
 }
 //%block
 //% group="Converting Bases"
