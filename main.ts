@@ -69,6 +69,11 @@ export function to__base (num: number, new_base: number) {
     }
     return temp_num4
 }
+//%block
+//% group="test"
+export function test(base: number, num: number) {
+    return num*(10/base)
+}
 export function convert_from_base_10_to_base (num: number, base: number) {
     temp_val2 = num
     temp_val = 0
