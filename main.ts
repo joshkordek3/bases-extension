@@ -30,13 +30,15 @@ export function a_n() {
 //% block="Convert $num from base 10 to base $new_base (2-9)"
 //% group="Converting Bases"
 export function to_base (num: number, new_base: number) {
+    temp_val3 = num
     temp_num = 0
     temp_num2 = 0
     if (is_between (new_base, 2, 10)) {
     while ((new_base ** temp_num) <= num) {
         temp_num++;
     }
-    while (temp_num--) {
+    while (temp_val3 <= convert_from_base_to_base_10(new_base, temp_num2)) {
+        temp_num--
         temp_num3 = Math.idiv(num, (new_base ** temp_num))
         num = num % new_base
         temp_num2 = temp_num2*10 + temp_num3;
@@ -47,13 +49,15 @@ export function to_base (num: number, new_base: number) {
 //% block="Convert $num from base 10 to base $new_base (11-36)"
 //% group="Converting Bases"
 export function to__base (num: number, new_base: number) {
+    temp_val3 = num
     temp_num = 0
     temp_num4 = ""
     if (is_between (new_base, 11, 36)) {
     while ((new_base ** temp_num) <= num) {
         temp_num++;
     }
-    while (temp_num--) {
+    while (temp_val3 <= convert_from_hex_base_10(new_base, temp_num4)) {
+        temp_num--
         temp_num5 = a_n().charAt(Math.idiv(num, (new_base ** temp_num)))
         num = num % new_base
         temp_num4 = "" + temp_num4 + temp_num5;
@@ -89,8 +93,9 @@ export function is_between (num: number, least: number, max: number) {
 }
 let divider = 0
 let index3 = 0
-let temp_val2 = 0
 let temp_val = 0
+let temp_val2 = 0
+let temp_val3 = 0
 let temp_num = 0
 let temp_num2 = 0
 let temp_num3 = 0
