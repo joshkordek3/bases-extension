@@ -27,6 +27,21 @@ export function convert_from_hex_base_10 (base: number, num: string) {
 export function a_n() {
     return "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 }
+//%block
+//% group="Converting Bases"
+export function to_base (num: number, new_base: number) {
+    temp_num = 0
+    while ((new_base ** temp_num) <= num) {
+        temp_num += 1
+    }
+    temp_num2 = 0
+    while (temp_num--) {
+        temp_num3 = Math.idiv(num, (new_base ** temp_num))
+        num /= new_base
+        temp_num2 = temp_num2*10 + temp_num3
+    }
+    return temp_num2
+}
 export function convert_from_base_10_to_base (num: number, base: number) {
     temp_val2 = num
     temp_val = 0
@@ -58,6 +73,8 @@ let index3 = 0
 let temp_val2 = 0
 let temp_val = 0
 let temp_num = 0
+let temp_num2 = 0
+let temp_num3 = 0
 }
 //%block
 //% group="Converting Bases"
