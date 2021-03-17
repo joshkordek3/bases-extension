@@ -14,11 +14,11 @@ export function convert_from_base_to_base_10 (base: number, num: number) {
 //% block="Convert $num from hexadecimal to base 10"
 //% group="Converting Bases"
 export function convert__from_base_to_base_10 (num: string) {
-    temp_txt = ""
+    temp_num = 0
     for (let index = 0; index <= num.length - 1; index++) {
-        temp_txt = "" + (num.charAt(index).indexOf(a_n()))
+        temp_num += ((num.charAt(index).indexOf(a_n())) ** (index + 1))
     }
-    return parseFloat(temp_txt)
+    return temp_num
 }
 function a_n() {
     return "0123456789ABCDEF"
@@ -53,7 +53,7 @@ let divider = 0
 let index3 = 0
 let temp_val2 = 0
 let temp_val = 0
-let temp_txt = ""
+let temp_num = 0
 }
 //%block
 //% group="Converting Bases"
