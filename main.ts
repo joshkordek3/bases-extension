@@ -63,16 +63,11 @@ export function to__base (num: number, new_base: number) {
         num = num % new_base
         temp_num4 = "" + temp_num4 + temp_num5;
     }
-    if (!(temp_val3 = convert_from_base_to_base_10(new_base, temp_num2))) {
+    if (!(temp_val3 = convert_from_hex_base_10(new_base, temp_num4))) {
         temp_num4 = "" + temp_num4 + 0
     }
     }
     return temp_num4
-}
-//%block
-//% group="test"
-export function test(base: number, num: number) {
-    return num*(10/base)
 }
 export function convert_from_base_10_to_base (num: number, base: number) {
     temp_val2 = num
