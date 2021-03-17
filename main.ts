@@ -49,7 +49,7 @@ export function to_base (num: number, new_base: number) {
 export function to__base (num: number, new_base: number) {
     temp_num = 0
     temp_num4 = ""
-    if (is_between (new_base, 2, 10)) {
+    if (is_between (new_base, 11, 36)) {
     while ((new_base ** temp_num) <= num) {
         temp_num++;
     }
