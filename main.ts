@@ -1,6 +1,6 @@
 //% color=#9600CD weight=0 icon="\uf1ec" block="Advanced Math"
 namespace advanced.math {
-//%block
+//% block="Convert $num from base $base to base 10"
 //% group="Converting Bases"
 export function convert_from_base_to_base_10 (base: number, num: number) {
     temp_val = 0
@@ -32,7 +32,7 @@ export function convert_from_base_10_to_base (num: number, base: number) {
     }
     return temp_val
 }
-//% block="is $num between $least and $max"
+//% block="$num is between $least and $max"
 //% group="Measuring"
 export function is_between (num: number, least: number, max: number) {
     return least <= num && num <= max
