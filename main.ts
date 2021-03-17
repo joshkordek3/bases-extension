@@ -1,6 +1,6 @@
 //% color=#9600CD weight=0 icon="\uf1ec" block="Advanced Math"
 namespace advanced.math {
-//% block="Convert $num from base $base to base 10"
+//% block="Convert $num from base $base (2-9) to base 10"
 //% group="Converting Bases"
 export function convert_from_base_to_base_10 (base: number, num: number) {
     temp_val = 0
@@ -10,6 +10,18 @@ export function convert_from_base_to_base_10 (base: number, num: number) {
         }
     }
     return temp_val
+}
+//% block="Convert $num from hexadecimal to base 10"
+//% group="Converting Bases"
+export function convert__from_base_to_base_10 (num: number) {
+    temp_txt = ""
+    for (let index = 0; index <= convertToText(num).length - 1; index++) {
+        temp_txt = "" + (convertToText(num).charAt(index).indexOf(a_n()))
+    }
+    return parseFloat(temp_txt)
+}
+function a_n() {
+    return "0123456789ABCDEF"
 }
 export function convert_from_base_10_to_base (num: number, base: number) {
     temp_val2 = num
@@ -41,6 +53,7 @@ let divider = 0
 let index3 = 0
 let temp_val2 = 0
 let temp_val = 0
+let temp_txt = ""
 }
 //%block
 //% group="Converting Bases"
