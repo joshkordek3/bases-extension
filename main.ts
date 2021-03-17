@@ -11,7 +11,7 @@ export function convert_from_base_to_base_10 (base: number, num: number) {
     }
     return temp_val
 }
-//% block="Convert $num from $base (11-36) base to base 10"
+//% block="Convert $num from base $base (11-36) to base 10"
 //% group="Converting Bases"
 export function convert_from_hex_base_10 (base: number, num: string) {
     temp_val = 0
