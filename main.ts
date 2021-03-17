@@ -11,8 +11,6 @@ export function convert_from_base_to_base_10 (base: number, num: number) {
     }
     return temp_val
 }
-//%block
-//% group="Converting Bases"
 export function convert_from_base_10_to_base (num: number, base: number) {
     temp_val2 = num
     temp_val = 0
@@ -44,3 +42,5 @@ let index3 = 0
 let temp_val2 = 0
 let temp_val = 0
 }
+//%block
+//% group="Converting Bases"
