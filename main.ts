@@ -11,16 +11,18 @@ export function convert_from_base_to_base_10 (base: number, num: number) {
     }
     return temp_val
 }
-//% block="Convert $num from hexadecimal to base 10"
+//% block="Convert $num from $base (11-16) base to base 10"
 //% group="Converting Bases"
-export function convert_from_hex_base_10 (num: string) {
+export function convert_from_hex_base_10 (base: number, num: string) {
     temp_num = 0
     for (let index = 0; index <= num.length - 1; index++) {
-        temp_num += ((a_n().indexOf(num.charAt(index))) * 16 ** index)
+        temp_num += ((a_n().indexOf(num.charAt(index))) * base ** (num.length - index))
     }
     return temp_num
 }
-function a_n() {
+//% block="Numbers in hexdecimal"
+//% group="Values"
+export function a_n() {
     return "0123456789ABCDEF"
 }
 export function convert_from_base_10_to_base (num: number, base: number) {
