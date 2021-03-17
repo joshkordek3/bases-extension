@@ -54,7 +54,7 @@ export function to__base (num: number, new_base: number) {
         temp_num++;
     }
     while (temp_num--) {
-        temp_num5 = a_n().charAt((Math.idiv(num, (new_base ** temp_num))) + 1)
+        temp_num5 = a_n().charAt(Math.idiv(num, (new_base ** temp_num)))
         num = num % new_base
         temp_num4 = "" + temp_num4 + temp_num5;
     }
