@@ -32,13 +32,13 @@ export function a_n() {
 export function to_base (num: number, new_base: number) {
     temp_num = 0
     while ((new_base ** temp_num) <= num) {
-        temp_num += 1
+        temp_num++;
     }
     temp_num2 = 0
     while (temp_num--) {
         temp_num3 = Math.idiv(num, (new_base ** temp_num))
-        num /= new_base
-        temp_num2 = temp_num2*10 + temp_num3
+        num = num / new_base
+        temp_num2 = temp_num2*10 + temp_num3;
     }
     return temp_num2
 }
