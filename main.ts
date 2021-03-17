@@ -33,9 +33,6 @@ export function convert_from_base_10_to_base (num: number, base: number) {
     return temp_val
 }
 //% block="is $num between $least and $max"
-//% num.shadow="num"
-//% least.shadow="least"
-//% max.shadow="max"
 //% group="Measuring"
 export function is_between (num: number, least: number, max: number) {
     return least <= num && num <= max
