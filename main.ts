@@ -27,7 +27,7 @@ export function convert_from_hex_base_10 (base: number, num: string) {
 export function a_n() {
     return "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 }
-//% block="Convert $num from base 10 to base $new_base (2-10)"
+//% block="Convert $num from base 10 to base $new_base (2-9)"
 //% group="Converting Bases"
 export function to_base (num: number, new_base: number) {
     temp_num = 0
