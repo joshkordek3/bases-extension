@@ -72,7 +72,7 @@ export function to__base (num: number, new_base: number) {
 //% block="digit $digit of $num"
 //% group="Extracting"
 export function test (digit: number, num: number) {
-    return parseFloat(convertToText(num).charAt(digit + 1))
+    return parseFloat(convertToText(num).charAt(digit - 1))
 }
 //% block="$num is between $least and $max"
 //% group="Measuring"
