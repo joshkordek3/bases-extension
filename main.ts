@@ -74,7 +74,8 @@ export function to__base (num: number, new_base: number) {
 export function test (digit: number, num: number) {
     return parseFloat(convertToText(num).charAt(digit - 1))
 }
-//% blockHidden=true
+//% group="test"
+//% blockHidden=false
 //% colorSecondary="#FFFFFF"
 //% test.fieldEditor="numberdropdown" test.fieldOptions.decompileLiterals=true
 //% block="set game score $test"
