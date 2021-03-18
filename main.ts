@@ -74,15 +74,6 @@ export function to__base (num: number, new_base: number) {
 export function test (digit: number, num: number) {
     return parseFloat(convertToText(num).charAt(digit - 1))
 }
-//% group="test"
-//% blockHidden=false
-//% test.fieldEditor="numberdropdown" test.fieldOptions.decompileLiterals=true
-//% block="test $test"
-//% colorSecondary="#9600CD"
-//% test.fieldOptions.data='[["+"], ["-"], ["x"], ["/"], ["**"]]'
-export function __tennisScore(test: number): number {
-    return 0
-}
 //% block="$num is between $least and $max"
 //% group="Measuring"
 export function is_between (num: number, least: number, max: number) {
