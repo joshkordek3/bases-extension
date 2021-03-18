@@ -76,9 +76,10 @@ export function test (digit: number, num: number) {
 }
 //% group="test"
 //% blockHidden=false
-//% test.fieldEditor="numberdropdown" test.fieldOptions.decompileLiterals=false
+//% test.fieldEditor="numberdropdown" test.fieldOptions.decompileLiterals=true
 //% block="test $test"
-//% test.fieldOptions.data='[["+", "+"], ["-", "-"], ["x", "x"], ["/", "/"], ["**", "**"]]'
+//% colorSecondary="#9600CD"
+//% test.fieldOptions.data='[["+"], ["-"], ["x"], ["/"], ["**"]]'
 export function __tennisScore(test: number): number {
     return 0
 }
