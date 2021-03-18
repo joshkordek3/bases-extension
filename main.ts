@@ -69,26 +69,10 @@ export function to__base (num: number, new_base: number) {
     }
     return temp_num4
 }
-export function convert_from_base_10_to_base (num: number, base: number) {
-    temp_val2 = num
-    temp_val = 0
-    index3 = 0
-    if (is_between(base, 2, 10)) {
-        while (!(divider > num)) {
-            divider = base ** index3
-            index3 += 1
-        }
-        index3 = 0
-        for (let index2 = 0; index2 <= 1e+300; index2++) {
-            temp_val = parseFloat("" + convertToText(temp_val) + convertToText(Math.idiv(temp_val2, divider)))
-            temp_val2 = temp_val2 % divider
-            divider = divider / base
-            if (num <= convert_from_base_to_base_10(base, temp_val)) {
-            break;
-            }
-        }
-    }
-    return temp_val
+//% block="digit $digit of $num"
+//% group="Extracting"
+export function test (digit: number, num: number) {
+    return parseFloat(convertToText(num).charAt(digit + 1))
 }
 //% block="$num is between $least and $max"
 //% group="Measuring"
