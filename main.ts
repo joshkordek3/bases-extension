@@ -79,11 +79,16 @@ export function to__base (num: number, new_base: number) {
 }
 //% block="digit $digit of $num"
 //% group="Extracting"
+//% digit.defl=1
+//% num.defl=26
 export function test (digit: number, num: number) {
     return parseFloat(convertToText(num).charAt(digit - 1))
 }
 //% block="$num is between $least and $max"
 //% group="Measuring"
+//% num.defl=26
+//% least.defl=2
+//% max.defl=36
 export function is_between (num: number, least: number, max: number) {
     return least <= num && num <= max
 }
