@@ -76,13 +76,12 @@ export function test (digit: number, num: number) {
 }
 //% group="test"
 //% blockHidden=false
-//% colorSecondary="#FFFFFF"
 //% test.fieldEditor="numberdropdown" test.fieldOptions.decompileLiterals=true
-//% block="set game score $test"
+//% block="test $test"
 //% test.shadow="tennisScore"
 //% test.fieldOptions.data='[["+", "+"], ["-", "-"], ["x", "x"], ["/", "/"], ["**", "**"]]'
 export function __tennisScore(test: number): number {
-    return test;
+    return 0
 }
 //% block="$num is between $least and $max"
 //% group="Measuring"
