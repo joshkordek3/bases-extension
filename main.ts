@@ -76,7 +76,7 @@ export function test (digit: number, num: number) {
 }
 //% group="test"
 //% blockHidden=false
-//% test.fieldEditor="numberdropdown" test.fieldOptions.decompileLiterals=true
+//% test.fieldEditor="numberdropdown" test.fieldOptions.decompileLiterals=false
 //% block="test $test"
 //% test.fieldOptions.data='[["+", "+"], ["-", "-"], ["x", "x"], ["/", "/"], ["**", "**"]]'
 export function __tennisScore(test: number): number {
