@@ -3,6 +3,7 @@ namespace advanced.math {
 //% block="Convert $num from base $base (2-9) to base 10"
 //% group="Converting Bases"
 //% base.min=2 base.max=9
+//% base.defl=2
 export function convert_from_base_to_base_10 (base: number, num: number) {
     temp_val = 0
     if (is_between(base, 2, 10)) {
@@ -15,6 +16,7 @@ export function convert_from_base_to_base_10 (base: number, num: number) {
 //% block="Convert $num from base $base (11-36) to base 10"
 //% group="Converting Bases"
 //% base.min=11 base.max=36
+//% base.defl=16
 export function convert_from_hex_base_10 (base: number, num: string) {
     temp_val = 0
     if (is_between(base, 11, 36)) {
@@ -32,6 +34,7 @@ export function a_n() {
 //% block="Convert $num from base 10 to base $new_base (2-9)"
 //% group="Converting Bases"
 //% new_base.min=2 new_base.max=9
+//% new_base.defl=2
 export function to_base (num: number, new_base: number) {
     temp_val3 = num
     temp_num = 0
@@ -54,6 +57,7 @@ export function to_base (num: number, new_base: number) {
 //% block="Convert $num from base 10 to base $new_base (11-36)"
 //% group="Converting Bases"
 //% new_base.min=11 new_base.max=36
+//% new_base.defl=16
 export function to__base (num: number, new_base: number) {
     temp_val3 = num
     temp_num = 0
