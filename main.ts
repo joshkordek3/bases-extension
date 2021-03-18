@@ -39,7 +39,7 @@ export function to_base (num: number, new_base: number) {
     }
     while (temp_num--) {
         temp_num3 = Math.idiv(num, (new_base ** temp_num))
-        num = num % new_base
+        num = num % (new_base ** temp_num)
         temp_num2 = temp_num2*10 + temp_num3;
     }
     if (!(temp_val3 = convert_from_base_to_base_10(new_base, temp_num2))) {
@@ -60,7 +60,7 @@ export function to__base (num: number, new_base: number) {
     }
     while (temp_num--) {
         temp_num5 = a_n().charAt(Math.idiv(num, (new_base ** temp_num)))
-        num = num % new_base
+        num = num % (new_base ** temp_num)
         temp_num4 = "" + temp_num4 + temp_num5;
     }
     if (!(temp_val3 = convert_from_hex_base_10(new_base, temp_num4))) {
