@@ -81,15 +81,20 @@ export function to__base (num: number, new_base: number) {
 //% group="Extracting"
 //% digit.defl=1
 //% num.defl=26
-export function test (digit: number, num: number) {
+export function digit (digit: number, num: number) {
     return parseFloat(convertToText(num).charAt(digit - 1))
 }
 //% block="first $length digits of π"
 //% group="Values"
 //% length.min=0 length.max=25
 //% length.defl=0
-export function heehee(length: number) {
+export function pi (length: number) {
     return parseFloat ("3.1415926535897932384626433".substr(0, length + 2))
+}
+//% block="Convert $top over $below into a decimal"
+//% group="Fraction Converting"
+export function convert_from_fraction (below: number, top: number) {
+    return top / below
 }
 //% block="$num is between $least and $max"
 //% group="Measuring"
@@ -109,6 +114,7 @@ let temp_num2 = 0
 let temp_num3 = 0
 let temp_num4 = ""
 let temp_num5 = ""
+let temp_num6 = 0
 }
 //%block
 //% group="Converting Bases"
