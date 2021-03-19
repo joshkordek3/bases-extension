@@ -86,6 +86,8 @@ export function test (digit: number, num: number) {
 }
 //% block="first $length digits of π"
 //% group="Values"
+//% length.min=0 length.max=25
+//% length.defl=0
 export function heehee(length: number) {
     return parseFloat ("3.1415926535897932384626433".substr(0, length + 2))
 }
