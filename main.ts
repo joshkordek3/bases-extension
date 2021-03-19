@@ -84,6 +84,11 @@ export function to__base (num: number, new_base: number) {
 export function test (digit: number, num: number) {
     return parseFloat(convertToText(num).charAt(digit - 1))
 }
+//% block="first $length digits of π"
+//% group="Values"
+export function heehee(length: number) {
+    return parseFloat ("3.1415926535897932384626433".substr(0, length + 2))
+}
 //% block="$num is between $least and $max"
 //% group="Measuring"
 //% num.defl=26
