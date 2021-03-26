@@ -1,5 +1,5 @@
 //% color=#9600CD weight=0 icon="\uf1ec" block="Advanced Math"
-namespace advanced.math {
+namespace Math {
 //% block="Convert $num from base $base (2-9) to base 10"
 //% group="Converting Bases"
 //% base.min=2 base.max=9
@@ -116,9 +116,3 @@ let temp_num4 = ""
 let temp_num5 = ""
 let temp_num6 = 0
 }
-//%block
-//% group="Converting Bases"
-
-
-//% block="planet id from $planet"
-//% planet.shadow="planet"
