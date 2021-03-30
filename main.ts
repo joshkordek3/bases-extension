@@ -13,6 +13,24 @@ export function convert_from_base_to_base_10 (base: number, num: number) {
     }
     return temp_val
 }
+//% block="convert $bool into a number"
+//% group="converting types"
+export function convert_bool (bool: boolean) {
+    if (bool) {
+        return 1
+    } else {
+        return 0
+    }
+}
+//% block="convert $num into a boolean"
+//% group="converting types"
+export function convert_to_bool (num: number) {
+    if (num = 1) {
+        return true
+    } else {
+        return false
+    }
+}
 //% block="Convert $num from base $base (11-36) to base 10"
 //% group="Converting Bases"
 //% base.min=11 base.max=36
@@ -36,21 +54,17 @@ export function a_n() {
 //% new_base.min=2 new_base.max=9
 //% new_base.defl=2
 export function to_base (num: number, new_base: number) {
-    temp_val3 = num
     temp_num = 0
     temp_num2 = 0
     if (is_between (new_base, 2, 10)) {
-    while ((new_base ** temp_num) <= num) {
-        temp_num++;
-    }
-    while (temp_num--) {
-        temp_num3 = Math.idiv(num, (new_base ** temp_num))
-        num = num % (new_base ** temp_num)
-        temp_num2 = temp_num2*10 + temp_num3;
-    }
-    if (!(temp_val3 = convert_from_base_to_base_10(new_base, temp_num2))) {
-        temp_num2 = parseFloat("" + temp_num2 + 0)
-    }
+        while ((new_base ** temp_num) <= num) {
+            temp_num++;
+        }
+        while (temp_num--) {
+            temp_num3 = Math.idiv(num, (new_base ** temp_num))
+            num = num % (new_base ** temp_num)
+            temp_num2 = temp_num2*10 + temp_num3;
+        }
     }
     return temp_num2
 }
@@ -59,21 +73,17 @@ export function to_base (num: number, new_base: number) {
 //% new_base.min=11 new_base.max=36
 //% new_base.defl=16
 export function to__base (num: number, new_base: number) {
-    temp_val3 = num
     temp_num = 0
     temp_num4 = ""
     if (is_between (new_base, 11, 36)) {
-    while ((new_base ** temp_num) <= num) {
-        temp_num++;
-    }
-    while (temp_num--) {
-        temp_num5 = a_n().charAt(Math.idiv(num, (new_base ** temp_num)))
-        num = num % (new_base ** temp_num)
-        temp_num4 = "" + temp_num4 + temp_num5;
-    }
-    if (!(temp_val3 = convert_from_hex_base_10(new_base, temp_num4))) {
-        temp_num4 = "" + temp_num4 + 0
-    }
+        while ((new_base ** temp_num) <= num) {
+            temp_num++;
+        }
+        while (temp_num--) {
+            temp_num5 = a_n().charAt(Math.idiv(num, (new_base ** temp_num)))
+            num = num % (new_base ** temp_num)
+            temp_num4 = "" + temp_num4 + temp_num5;
+        }
     }
     return temp_num4
 }
@@ -87,7 +97,7 @@ export function digit (digit: number, num: number) {
 //% block="first $length digits of π"
 //% group="Values"
 //% length.min=0 length.max=25
-//% length.defl=0
+//% length.defl=1
 export function pi (length: number) {
     return parseFloat ("3.1415926535897932384626433".substr(0, length + 2))
 }
@@ -108,7 +118,6 @@ let divider = 0
 let index3 = 0
 let temp_val = 0
 let temp_val2 = 0
-let temp_val3 = 0
 let temp_num = 0
 let temp_num2 = 0
 let temp_num3 = 0
