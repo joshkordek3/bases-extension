@@ -25,7 +25,7 @@ export function convert_bool (bool: boolean) {
 //% block="convert $num into a boolean"
 //% group="converting types"
 export function convert_to_bool (num: number) {
-    if (num = 1) {
+    if (num == 1) {
         return true
     } else {
         return false
